@@ -1,0 +1,49 @@
+.animate-character
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 20px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.cold-bg{
+  background-image: url('../coldweather.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cool-bg{
+  background-image: url('../drizzlingweather.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hot-bg{
+  background-image: url('../summerweather.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.warm-bg{
+  background-image: url('../warmweather.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
