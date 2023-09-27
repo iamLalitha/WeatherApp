@@ -7,18 +7,20 @@ import sunny from '../sungif.gif';
 import warm from '../warm.gif';
 import './WeatherPage.css';
 
+const backendURL = 'http://localhost:3001';
+
 function WeatherPage() {
   const [data, setData] = useState({});
   const location = useLocation();
 
   useEffect(() => {
-   
+  
     const city = new URLSearchParams(location.search).get('city');
     console.log('City:', city);
 
     if (city) {
       axios
-        .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY }`)
+      .get(`${backendURL}/weather?city=${city}`)
         .then((response) => {
           setData(response.data);
           console.log('Weather Data:', response.data); 
