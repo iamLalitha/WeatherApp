@@ -12,13 +12,13 @@ function WeatherPage() {
   const location = useLocation();
 
   useEffect(() => {
-    const apiKey = '95a7df8a003357d948e8bbc2fe7955c5';
+   
     const city = new URLSearchParams(location.search).get('city');
     console.log('City:', city);
 
     if (city) {
       axios
-        .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+        .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY }`)
         .then((response) => {
           setData(response.data);
           console.log('Weather Data:', response.data); 
