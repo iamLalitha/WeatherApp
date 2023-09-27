@@ -7,7 +7,7 @@ import sunny from '../sungif.gif';
 import warm from '../warm.gif';
 import './WeatherPage.css';
 
-const backendURL = 'http://localhost:3001';
+const backendURL = 'https://weatherapp-backend-c1q4.onrender.com';
 
 function WeatherPage() {
   const [data, setData] = useState({});
